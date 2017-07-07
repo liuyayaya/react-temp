@@ -1,0 +1,66 @@
+/* 自定义 media query postcss-custom-media 会进行处理 */
+// $mobile: only screen and (max-device-width: 720px),only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 720px);
+
+body {
+    color: #333;
+    -webkit-text-size-adjust: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    /**
+     * 防止页面上的图片溢出。
+     * 注意，在 IE8 中如果 <img> 的父级元素加了 float，并且没有给 <img>
+     * 设置宽度的话，会出现图片不显示的 bug，解决方法是给这些图片设置
+     * 宽度或者设置 `max-width: none` 来覆盖 `max-width: 100%`
+     */
+
+    /* max-width: 100%; */
+
+    // @media ($mobile) {
+    //     max-width: 100%;
+    // }
+}
+
+/**
+ * .clearfix
+ * @see http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+
+.clearfix,
+.u-clear {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after,
+.u-clear:before,
+.u-clear:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after,
+.u-clear:after {
+    clear: both;
+}
+.mobile-only {
+    display: none;
+
+    // @media ($mobile) {
+    //     display: block !important;
+    // }
+}
+.pc-only {
+    // @media ($mobile) {
+    //     display: none !important;
+    // }
+}

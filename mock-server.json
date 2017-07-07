@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typ"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Lily"
+  },
+  "activity": {
+    "success": true,
+    "message": "",
+    "data": [
+      {
+        "name": "project1",
+        "created": "2017-04-23 09:24",
+        "tid": "274"
+      },
+      {
+        "name": "project2",
+        "created": "2017-03-28 15:24",
+        "tid": "272"
+      }
+    ],
+    "total": 2,
+    "cur_page": 0,
+    "pagesize": 10
+  }
+}
